@@ -1,0 +1,11 @@
+[build]
+providers = ["php"]
+
+[variables]
+PHP_VERSION = "8.2"
+
+[phases.install]
+cmds = ["mkdir -p /var/log/nginx", "mkdir -p /var/cache/nginx"]
+
+[start]
+cmd = "php -S 0.0.0.0:$PORT -t ."
