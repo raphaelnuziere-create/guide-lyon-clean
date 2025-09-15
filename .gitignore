@@ -45,3 +45,6 @@ composer.lock
 # Runtime
 runtime/
 /storage/
+
+# Vercel
+.vercel

@@ -1,0 +1,61 @@
+{
+  "version": 2,
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.6.0"
+    }
+  },
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/api/index.php"
+    },
+    {
+      "src": "/annuaire",
+      "dest": "/api/annuaire.php"
+    },
+    {
+      "src": "/evenements", 
+      "dest": "/api/evenements.php"
+    },
+    {
+      "src": "/tarifs",
+      "dest": "/api/tarifs.php"
+    },
+    {
+      "src": "/contact",
+      "dest": "/api/contact.php"
+    },
+    {
+      "src": "/ajouter-entreprise",
+      "dest": "/api/ajouter-entreprise.php"
+    },
+    {
+      "src": "/entreprise/(.*)",
+      "dest": "/api/entreprise.php?slug=$1"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/js/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ]
+}
