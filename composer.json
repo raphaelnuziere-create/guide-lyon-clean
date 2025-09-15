@@ -16,7 +16,8 @@
     },
     "scripts": {
         "test": "phpunit",
-        "serve": "php -S localhost:8000 -t ."
+        "serve": "php -S localhost:8000 -t .",
+        "start": "./start.sh"
     },
     "config": {
         "optimize-autoloader": true,
