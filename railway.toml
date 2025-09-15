@@ -1,13 +1,8 @@
 [build]
-builder = "heroku/buildpacks:20"
-buildpacks = ["heroku/php"]
+provider = "nixpacks"
 
 [deploy]
-numReplicas = 1
-sleepOnDeploy = false
-restartPolicyType = "ON_FAILURE"
-restartPolicyMaxRetries = 10
+startCommand = "php -S 0.0.0.0:$PORT -t ."
 
 [environment]
-NODE_ENV = "production"
 APP_ENV = "production"
