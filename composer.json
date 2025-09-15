@@ -1,0 +1,25 @@
+{
+    "name": "guide-lyon/website",
+    "description": "Guide de Lyon - Site web PHP avec Directus CMS",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GuideLyon\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "serve": "php -S localhost:8000 -t ."
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
